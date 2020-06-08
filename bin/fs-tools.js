@@ -42,9 +42,25 @@ program
 program
   .command("convertWebp")
   .description("convert .webp to .png")
-  .alias("cw")
+  .alias("cwp")
   .action(() => {
     require(res("convertWebp"))
+  });
+
+program
+  .command("convertWebg")
+  .description("convert .webp to .gif")
+  .alias("cwg")
+  .action(() => {
+    require(res("convertWebm"))
+  });
+
+program
+  .command("removeRaw")
+  .description("remove abandon raw images")
+  .alias("rr")
+  .action(() => {
+    require(res("removeRaw"))
   });
 
 program.parse(process.argv);

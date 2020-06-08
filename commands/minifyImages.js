@@ -14,7 +14,7 @@ const launch = folderPath => {
   fs.readdirSync(folderPath).forEach(file => {
     const filePath = folderPath + "/" + file;
     const stat = fs.statSync(filePath);
-    if (stat.isFile() && stat.size > 2000000) {
+    if (stat.isFile() && stat.size > 1000000) {
       if (/(.*)\.(jpg|png)/.test(file)) {
         minifyImage(filePath);
       }
